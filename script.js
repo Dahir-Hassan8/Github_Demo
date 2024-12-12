@@ -13,17 +13,17 @@ function startGame(playerChoice)  //take the player choice as an argument instea
     (playerChoice === "Scissors" && cpuChoice === "Paper")
   ) {
     score++;
-    document.body.style.backgroundColor = "green"
+    document.body.style.backgroundColor = "#48f338"
     results = `You picked: ${playerChoice} and the CPU picked ${cpuChoice}.
     
     Congratulations you have won this round`;
   } else if (playerChoice === cpuChoice) {
     results = ` You both picked ${playerChoice}. It is a draw, please play again;`
-    document.body.style.backgroundColor = "yellow"
+    document.body.style.backgroundColor = "#F3F138"
   } else {
     score--;
     results = `You picked ${playerChoice} while the cpu picked ${cpuChoice}. you lost Better luck next time`;
-    document.body.style.backgroundColor = "red"
+    document.body.style.backgroundColor = "#B11B31"
   }
   document.getElementById("Result").innerText = results;
   document.getElementById("Score").innerText = `Score: ${score}`;
